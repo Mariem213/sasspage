@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;500;700&display=swap');
+@import 'navbar';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+// Header
+.header {
+    background-color: $light;
+    .headerContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+        .left {
+            width: 100%;
+            line-height: 1.2;
+            @include tablet {
+                padding: 5rem 0;
+            }
+            @include mobile {
+                line-height: 1.5;
+            }
+            h1 {
+                font-size: 4rem;
+                color: $lime;
+                @include mobile {
+                    font-size: 1.5rem;
+                }
+            }
+            h2 {
+                font-size: 4rem;
+                color: $dark;
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
+            p {
+                font-size: 2rem;
+                color: $dark;
+                margin-top: 1rem;
+                font-weight: 700;
+                @include mobile {
+                    font-size: 1.5rem;
+                }
+            }
+            .btn {
+                font-size: 1rem;
+                background-color: $lime;
+                padding: 14px 32px;
+                border: none;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                color: $light;
+                margin-top: 2rem;
+                cursor: pointer;
+                position: relative;
+                outline: none;
+                transition: 0.3s all ease-in-out;
+                -webkit-transition: 0.3s all ease-in-out;
+                -moz-transition: 0.3s all ease-in-out;
+                -ms-transition: 0.3s all ease-in-out;
+                -o-transition: 0.3s all ease-in-out;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $orangered;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    transition: 0.5s all ease-in-out;
+                    -webkit-transition: 0.5s all ease-in-out;
+                    -moz-transition: 0.5s all ease-in-out;
+                    -ms-transition: 0.5s all ease-in-out;
+                    -o-transition: 0.5s all ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+                a {
+                    position: relative;
+                    color: $light;
+                    text-decoration: none;
+                    z-index: 2;
+                }
+            }
+        }
+        .right {
+            text-align: center;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
